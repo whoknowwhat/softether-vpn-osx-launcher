@@ -4,6 +4,7 @@ TARGET_IPS=(0.0.0.0 1.1.1.1)
 GATEWAY=192.168.0.1
 
 VPNCLIENT_HOME=${HOME}/Downloads/vpnclient
+VPN_NAME=DEFAULT_VPN
 
 start() {
     sudo ${VPNCLIENT_HOME}/vpnclient start
@@ -11,7 +12,7 @@ start() {
 2
 localhost
 accountconnect
-Nethru VPN
+${VPN_NAME}
 accountlist
 exit
 EOF
