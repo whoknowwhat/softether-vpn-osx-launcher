@@ -20,7 +20,8 @@ EOF
     sleep 10
     sudo /usr/sbin/ipconfig set tap0 DHCP
     # waiting for dhcp
-    sleep 3
+    sleep 5
+    # print allocated ip
     /sbin/ifconfig tap0
     for ip in ${TARGET_IPS[@]}; do
         sudo route -n add -net ${ip}/32 ${GATEWAY}
