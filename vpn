@@ -29,10 +29,18 @@ EOF
 }
 
 stop() {
+    ${VPNCLIENT_HOME}/vpncmd << EOF
+2
+localhost
+accountdisconnect
+${VPN_NAME}
+accountlist
+exit
+EOF
     for ip in ${TARGET_IPS[@]}; do
         sudo route -n delete -net ${ip}/32 ${GATEWAY}
     done
-    sudo ${VPNCLEINT_HOME}/vpnclient stop
+    sudo ${VPNCLIENT_HOME}/vpnclient stop
 }
 
 status() {
