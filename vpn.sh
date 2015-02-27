@@ -1,10 +1,14 @@
 #!/bin/bash
 
+##########################################################
+# YOU MUST MODIFIED THIS CONSTANTS UPON YOUR ENVIRONMENTS
+##########################################################
 TARGET_IPS=(0.0.0.0 1.1.1.1)
 GATEWAY=192.168.0.1
 
 VPNCLIENT_HOME=${HOME}/Downloads/vpnclient
 VPN_NAME='DEFAULT_VPN'
+##########################################################
 
 start() {
     sudo ${VPNCLIENT_HOME}/vpnclient start
