@@ -1,13 +1,13 @@
 #!/bin/bash
 
 ##########################################################
-# YOU MUST MODIFIED THIS CONSTANTS UPON YOUR ENVIRONMENTS
+# YOU MUST MODIFIED THIS VARIABLES UPON YOUR ENVIRONMENTS
 ##########################################################
-TARGET_IPS=(0.0.0.0 1.1.1.1)
-GATEWAY=192.168.0.1
+TARGET_IPS=()
+GATEWAY=192.168.30.1
 
 VPNCLIENT_HOME=${HOME}/Downloads/vpnclient
-VPN_NAME='DEFAULT_VPN'
+VPN_NAME=''
 ##########################################################
 
 start() {
